@@ -1,0 +1,465 @@
+/* RESET CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost";
+}
+
+/* RESET CSS */
+
+/* Body */
+
+body {
+  overflow: hidden;
+}
+
+/* Body */
+
+/* Header Media 1200 */
+.headerLinksMedia {
+  display: none;
+}
+.headerContainer {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  top: 0;
+  left: 0;
+}
+
+.headerLogo {
+  width: 128px;
+  background: url(./components/images/channels4_profile-removebg-preview.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 10;
+}
+.headerLinks {
+  width: 70%;
+}
+.headerLinks ul {
+  display: flex;
+  list-style-type: none;
+  width: 90%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.headerLinks ul li a {
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  z-index: 30;
+}
+.burgerMenu {
+  display: none;
+}
+/* Header Media 1200 */
+
+/* Landing Container Media 1200 */
+
+.landingContainer {
+  position: absolute;
+  bottom: 8em;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landingSectionsContainer {
+  display: flex;
+}
+.landingContentContainer {
+  z-index: 10;
+  display: flex;
+  align-items: flex-start;
+}
+.landingContent {
+  display: flex;
+  flex-direction: column;
+}
+.landingTitleContainer {
+  display: flex;
+  flex-direction: column;
+}
+.landingTitle {
+  font-size: 56px;
+}
+.landingSubtitle {
+  background-color: #ffd729;
+  width: 400px;
+  text-align: center;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  font-weight: 100;
+}
+.landingBtnContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 1em;
+  gap: 1em;
+}
+.landingBtnMedia{
+  display: none;
+}
+.landingBtn {
+  width: 220px;
+  height: 50px;
+  background-color: #fed442;
+  text-align: center;
+  border: none;
+  font-size: 24px;
+  border-radius: 0.4em;
+  box-shadow: inset 0 0 0 0 black;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.landingBtn:hover {
+  box-shadow: inset 0 50px 10em 0 black;
+  transition: 0.3s;
+  color: #fed442;
+}
+@keyframes landingBtn {
+  0% {
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+  }
+}
+.landingText {
+  display: flex;
+  flex-direction: column;
+  font-size: 32px;
+  font-weight: 100;
+  padding: 0.2em;
+}
+.landingText span {
+  font-size: 24px;
+  font-weight: 100;
+}
+.landingLogo {
+  width: 256px;
+  height: 256px;
+  background: url(./components/images/business-4271251_640.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+  margin: 1em;
+  animation: formIn 1s both;
+}
+@keyframes formOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(10em);
+    opacity: 0;
+  }
+}
+@keyframes formIn {
+  0% {
+    transform: translateX(10em);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.landingContactForm {
+  width: 256px;
+  height: 256px;
+  position: relative;
+  bottom: 1.2em;
+  margin: 1em;
+  animation: formIn 1s both;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 1em;
+}
+.landingContactTitle {
+  background-color: #ffd729;
+  text-align: center;
+  border-radius: 1em;
+  font-weight: 100;
+  padding: 0.3em;
+}
+.landingContactForm input {
+  width: 250px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: 0 0 1px 1px #fed442;
+  outline: none;
+  text-align: center;
+  border-radius: 1em;
+}
+.landingContactForm button {
+  width: 200px;
+  padding: 0;
+  height: 30px;
+  font-size: 16px;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+}
+.bottomLandingContainer {
+  position: absolute;
+  bottom: 2em;
+  right: 1.3em;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.landingCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 120px;
+  border-radius: 0.3em;
+  background-color: #fed442;
+  box-shadow: 0 0 1em 1px #fed442;
+
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  background-color: #fed442;
+  color: white;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #fed442;
+  display: none;
+}
+
+.landingCard:hover {
+  transform: rotateY(180deg);
+}
+
+.landingCard:hover .back {
+  display: flex;
+  text-align: center;
+}
+/* Landing Container Media 1200 */
+
+/* Footer Container Media 1200 */
+
+.footerContainer {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  background-color: #ffd729;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.footerCopy {
+}
+.footerRRSS {
+  display: flex;
+  gap: 1em;
+}
+.facebook {
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: url(./components/images/facebook.png);
+}
+.instagram {
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: url(./components/images/instagram.png);
+}
+.youtube {
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: url(./components/images/youtube.png);
+}
+
+/* Footer Container Media 1200 */
+
+/* Polygon Background   */
+.headerBackground {
+  clip-path: polygon(0px 78.42%, 100% 62.57%, 100% 100%, 0px 100%);
+  background-color: #ffd729;
+  width: 100%;
+  height: 100%;
+  transform: rotateZ(180deg);
+  position: absolute;
+  z-index: -1;
+}
+.footerBackground {
+  clip-path: polygon(0 95%, 100% 80%, 100% 100%, 0 100%);
+  background-color: #ffd729;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+@media (max-width: 1200px) {
+  .headerBackground {
+    clip-path: polygon(0 77%, 100% 70%, 100% 100%, 0 100%);
+  }
+  .footerBackground {
+    clip-path: polygon(0 95%, 100% 80%, 100% 100%, 0 100%);
+  }
+}
+@media (max-width: 1000px) {
+  .headerBackground {
+    clip-path: polygon(0% 70%, 100% 65%, 100% 100%, 0% 100%);
+  }
+
+  .footerBackground {
+    clip-path: polygon(0% 95%, 100% 80%, 100% 100%, 0% 100%);
+  }
+}
+@media (max-width: 800px) {
+  .headerBackground {
+  }
+  .footerBackground {
+  }
+}
+/* Polygon Background   */
+
+/* Media Queries 800 */
+
+@media (max-width: 800px) {
+  /* Header Media 800 */
+  .burgerMenu {
+    display: flex;
+    align-self: center;
+  }
+  .burgerMenu span {
+    font-size: 32px !important;
+    position: relative;
+    right: 0.5em;
+    cursor: pointer;
+    z-index: 41;
+  }
+  .headerLinks {
+    display: none;
+  }
+  .headerLinksMedia {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    transform: translateX(100vh);
+    background-color: #ffd729;
+    width: 100%;
+    z-index: 40;
+  }
+  .headerLinksMedia ul {
+    list-style-type: none;
+  }
+  .headerLinkMedia {
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+  }
+  @keyframes headerEnter {
+    0% {
+      transform: translateX(100vh);
+    }
+    100% {
+      transform: translateX(0vh);
+    }
+  }
+  @keyframes headerOut {
+    0% {
+      transform: translateX(0vh);
+    }
+    100% {
+      transform: translateX(100vh);
+    }
+  }
+  /* Header Media 800 */
+
+  /* Landing Container Media 800 */
+  .landingTitleContainer {
+    align-items: center;
+  }
+  .landingTitle {
+    font-size: 48px;
+    text-align: center;
+  }
+  .landingSubtitle {
+    width: 300px;
+  }
+  .landingBtnContainer {
+    align-items: center;
+  }
+  .landingBtn{
+    display: none;
+  }
+  .landingBtnMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 50px;
+    background-color: #fed442;
+    border: none;
+    font-size: 24px;
+    border-radius: 0.4em;
+    box-shadow: inset 0 0 0 0 black;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .landingBtnMedia:hover {
+    box-shadow: inset 0 50px 10em 0 black;
+    transition: 0.3s;
+    color: #fed442;
+  }
+  .landingText {
+    text-align: center;
+  }
+  
+  .landingLogo {
+    display: none;
+  }
+  .bottomLandingContainer {
+    right: 0;
+  }
+  /* Landing Container Media 800 */
+}
+
+/* Media Queries 800 */
